@@ -1,0 +1,20 @@
+# Paste this into "Create New App > From an app manifest" on
+# https://api.slack.com/apps to create the app with the right permissions.
+display_information:
+  name: Keypup
+  description: Posts the pull requests waiting for attention, from Keypup.
+  background_color: "#0b0f2e"
+features:
+  bot_user:
+    display_name: Keypup
+    always_online: false
+oauth_config:
+  scopes:
+    bot:
+      # Post messages, in public channels without being invited first.
+      - chat:write
+      - chat:write.public
+settings:
+  org_deploy_enabled: false
+  socket_mode_enabled: false
+  token_rotation_enabled: false
